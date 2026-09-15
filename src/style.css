@@ -1,10 +1,88 @@
-.card {
-  background-color: red;
+:root{
+  --cinza: #c2c2c2;
+  --preto: #000000;
+  --azul-claro: #00b7ff;
+  --azul-escuro: #00366b;
+  --branco: #ffffff;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* tentar centralizar sem colocar display flex aqui em app */
+#app{ 
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container{
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.default-picture{
+  font-size: 2rem;
+  background-color: var(--branco);
+  border-radius: 50%;
+  padding: 15px;
+  font-family: Garamond, Baskerville, serif;
+}
+
+.card{
+  background-color: var(--azul-claro);
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 5px var(--cinza);
+  width: 500px;
+  
 }
 
 .picture{
+  width: 75px;
   border-radius: 50%;
+}
+
+.card-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-list li{
+  color: var(--branco);
+  font-weight: bold;
+  box-sizing: border-box;
+  width: auto;
+  background-color: var(--azul-escuro);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.topic h3{
+  border-bottom: 3px solid var(--cinza) 50%;
+  padding-bottom: 3px;
+}
+
+.infos{
+  border-bottom: 1px solid var(--preto);
+  padding-bottom: 15px;
 }

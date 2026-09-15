@@ -12,6 +12,7 @@ export function createProfilePicture(name, profilePictureElement){
     const initialsText = initials[0] + initials[1];
     const initialsProfile = document.createElement('span');
     initialsProfile.innerText = initialsText;
+    initialsProfile.classList.add('default-picture');
 
     // todo: add dots after each initial
     profilePictureElement.appendChild(initialsProfile);
